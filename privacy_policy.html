@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — TrackSub</title>
+  <style>
+    :root {
+      --brand:       #5C6BC0;
+      --brand-dark:  #3949AB;
+      --brand-light: #E8EAF6;
+      --text:        #212121;
+      --muted:       #616161;
+      --border:      #E0E0E0;
+      --bg:          #FAFAFA;
+      --white:       #FFFFFF;
+      --radius:      10px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 16px;
+    }
+
+    /* ── Header ─────────────────────────────────────────── */
+    header {
+      background: var(--brand);
+      color: var(--white);
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    header .app-name {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      opacity: 0.85;
+      margin-bottom: 10px;
+    }
+
+    header h1 {
+      font-size: clamp(26px, 5vw, 36px);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      font-size: 15px;
+      opacity: 0.85;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* ── Layout ─────────────────────────────────────────── */
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── Meta bar ───────────────────────────────────────── */
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      align-items: center;
+      background: var(--brand-light);
+      border: 1px solid #C5CAE9;
+      border-radius: var(--radius);
+      padding: 14px 20px;
+      margin-bottom: 40px;
+      font-size: 14px;
+      color: var(--brand-dark);
+    }
+
+    .meta span { display: flex; align-items: center; gap: 6px; }
+    .meta strong { font-weight: 600; }
+
+    /* ── Sections ───────────────────────────────────────── */
+    section {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      margin-bottom: 24px;
+    }
+
+    section h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--brand-light);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    section h2 .icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--brand-light);
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    p { margin-bottom: 14px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      padding-left: 22px;
+      margin-bottom: 14px;
+    }
+    ul:last-child, ol:last-child { margin-bottom: 0; }
+
+    li { margin-bottom: 8px; }
+    li:last-child { margin-bottom: 0; }
+
+    /* ── Callout boxes ──────────────────────────────────── */
+    .callout {
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 16px 0;
+      font-size: 15px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .callout .callout-icon { flex-shrink: 0; font-size: 18px; line-height: 1.5; }
+
+    .callout-green  { background: #E8F5E9; border-left: 4px solid #43A047; color: #1B5E20; }
+    .callout-blue   { background: #E3F2FD; border-left: 4px solid #1E88E5; color: #0D47A1; }
+    .callout-amber  { background: #FFF8E1; border-left: 4px solid #FFB300; color: #4E342E; }
+
+    /* ── Table ──────────────────────────────────────────── */
+    .table-wrap { overflow-x: auto; margin: 16px 0; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    thead th {
+      background: var(--brand);
+      color: var(--white);
+      text-align: left;
+      padding: 10px 14px;
+      font-weight: 600;
+    }
+    thead th:first-child { border-radius: 6px 0 0 0; }
+    thead th:last-child  { border-radius: 0 6px 0 0; }
+
+    tbody tr:nth-child(even) { background: var(--brand-light); }
+    tbody td { padding: 10px 14px; vertical-align: top; border-bottom: 1px solid var(--border); }
+
+    /* ── Links ──────────────────────────────────────────── */
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; color: var(--brand-dark); }
+
+    /* ── Contact card ───────────────────────────────────── */
+    .contact-card {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--brand-light);
+      border: 1px solid #C5CAE9;
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin-top: 16px;
+    }
+    .contact-card .contact-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+    }
+    .contact-card p { margin: 0; font-size: 15px; }
+    .contact-card strong { display: block; color: var(--brand-dark); margin-bottom: 2px; }
+
+    /* ── Footer ─────────────────────────────────────────── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--brand); }
+
+    /* ── Responsive ─────────────────────────────────────── */
+    @media (max-width: 520px) {
+      section { padding: 24px 20px; }
+      header  { padding: 36px 20px 32px; }
+      main    { padding: 32px 16px 64px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     HEADER
+════════════════════════════════════════════════════════════ -->
+<header>
+  <p class="app-name">NaRiSystems · TrackSub</p>
+  <h1>Privacy Policy</h1>
+  <p>We believe your financial data is yours alone. Here's exactly what we collect — and what we don't.</p>
+</header>
+
+<!-- ══════════════════════════════════════════════════════════
+     MAIN
+════════════════════════════════════════════════════════════ -->
+<main>
+
+  <!-- Meta bar -->
+  <div class="meta">
+    <span>📅 <strong>Last updated:</strong> July 15, 2026</span>
+    <span>📱 <strong>App:</strong> TrackSub — Bill &amp; Subscription Tracker</span>
+    <span>🏢 <strong>Developer:</strong> NaRiSystems</span>
+  </div>
+
+  <!-- 1. Overview ─────────────────────────────────────────── -->
+  <section id="overview">
+    <h2><span class="icon">👁</span> Overview</h2>
+
+    <p>
+      TrackSub is a local-first bill and subscription tracker. We built it on a simple
+      principle: <strong>your spending information belongs to you, not us</strong>.
+      The app does not require you to link a bank account, create an account with NaRiSystems,
+      or share any personal financial data with our servers.
+    </p>
+
+    <div class="callout callout-green">
+      <span class="callout-icon">✅</span>
+      <span>
+        <strong>Bottom line:</strong> NaRiSystems does not collect, store, or sell your
+        subscription data, billing amounts, or any personally identifiable financial
+        information. Everything you enter stays on your device.
+      </span>
+    </div>
+
+    <p>
+      This policy explains the narrow, well-defined cases where some data does flow
+      outside your device — specifically, anonymous crash and usage reporting,
+      ads shown to free-tier users, and the optional Google Drive backup
+      available to Premium subscribers.
+    </p>
+  </section>
+
+  <!-- 2. Data We Collect ──────────────────────────────────── -->
+  <section id="data-collected">
+    <h2><span class="icon">📊</span> Data We Collect</h2>
+
+    <p>The table below summarises every category of data involved when you use TrackSub.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Data Type</th>
+            <th>Collected by NaRiSystems?</th>
+            <th>Where It Goes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Subscription &amp; bill entries</td>
+            <td>No</td>
+            <td>Your device only</td>
+          </tr>
+          <tr>
+            <td>Billing amounts &amp; due dates</td>
+            <td>No</td>
+            <td>Your device only</td>
+          </tr>
+          <tr>
+            <td>Google Drive backup files <em>(Premium)</em></td>
+            <td>No</td>
+            <td>Your personal Google Drive</td>
+          </tr>
+          <tr>
+            <td>Ad identifiers &amp; interactions <em>(Free tier)</em></td>
+            <td>Via Google AdMob</td>
+            <td>Google's servers — see §5</td>
+          </tr>
+          <tr>
+            <td>Crash &amp; diagnostic reports</td>
+            <td>Anonymised only</td>
+            <td>Sentry (crash monitoring) — see §6</td>
+          </tr>
+          <tr>
+            <td>Anonymous usage events <em>(e.g. feature usage counts)</em></td>
+            <td>Anonymised only</td>
+            <td>Aptabase (usage analytics) — see §6</td>
+          </tr>
+          <tr>
+            <td>Name, email, or login credentials</td>
+            <td>No — never</td>
+            <td>Not collected</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      We use two lightweight, privacy-first services — Sentry for crash
+      reporting and Aptabase for anonymous usage analytics — described in
+      full in §6. We do not use session-recording tools, advertising-network
+      trackers, or any service that links your activity to your identity.
+    </p>
+  </section>
+
+  <!-- 3. Local Storage ─────────────────────────────────────── -->
+  <section id="local-storage">
+    <h2><span class="icon">📱</span> Local Storage</h2>
+
+    <p>
+      All subscription entries, categories, reminders, price history, and app
+      preferences are stored exclusively in your device's local storage using
+      Android's standard data APIs. This data:
+    </p>
+
+    <ul>
+      <li>Never leaves your device unless <em>you</em> choose to export or back it up.</li>
+      <li>Is not accessible to NaRiSystems or any third party.</li>
+      <li>Is removed when you uninstall the app or clear app data.</li>
+    </ul>
+
+    <p>
+      You can export your data at any time in <strong>JSON or CSV format</strong>
+      from within the app. You own that export — do with it as you wish.
+    </p>
+
+  </section>
+
+  <!-- 4. Optional Google Drive Backup ─────────────────────── -->
+  <section id="google-drive">
+    <h2><span class="icon">☁️</span> Optional Google Drive Backup</h2>
+
+    <p>
+      Premium subscribers can enable automatic backup of their TrackSub data to
+      Google Drive. This feature is:
+    </p>
+
+    <ul>
+      <li><strong>Opt-in only</strong> — it is off by default and must be explicitly enabled in Settings.</li>
+      <li><strong>Stored in your own Google account</strong> — backup files are written to your personal
+          Google Drive, in a private app-data folder visible only to you and TrackSub.</li>
+      <li><strong>Not accessible to NaRiSystems</strong> — we have no access to your Google Drive or
+          its contents at any time.</li>
+      <li><strong>Governed by Google's Privacy Policy</strong> — once data is on Google Drive, it
+          is subject to
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+    </ul>
+
+    <p>
+      You can disable Google Drive backup or delete your backup files at any time
+      from the app's Settings screen or directly from Google Drive.
+    </p>
+
+    <div class="callout callout-amber">
+      <span class="callout-icon">⚠️</span>
+      <span>
+        Google Drive backup requires you to sign in with a Google account within
+        the app. TrackSub requests only the minimum Drive scope necessary to read
+        and write its own backup files. We do not access any other files in your
+        Google Drive.
+      </span>
+    </div>
+  </section>
+
+  <!-- 5. Advertising ──────────────────────────────────────── -->
+  <section id="advertising">
+    <h2><span class="icon">📣</span> Advertising</h2>
+
+    <p>
+      TrackSub's free tier is supported by ads served by
+      <strong>Google AdMob</strong>. Ads are shown only to free-tier users.
+      Upgrading to Premium removes all ads entirely.
+    </p>
+
+    <p>
+      When ads are displayed, Google AdMob may collect and use certain information
+      from your device to serve relevant ads. This can include:
+    </p>
+
+    <ul>
+      <li>Advertising identifiers (Android Advertising ID)</li>
+      <li>Device type, operating system version, and language settings</li>
+      <li>General location (country / region level, derived from IP address)</li>
+      <li>Ad interaction data (impressions, taps)</li>
+    </ul>
+
+    <p>
+      NaRiSystems does <strong>not</strong> receive or store any of this information.
+      It is collected directly by Google under their own privacy policy.
+    </p>
+
+    <div class="callout callout-blue">
+      <span class="callout-icon">🔗</span>
+      <span>
+        For full details on how Google uses data from apps that use AdMob, see
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+          Google's Privacy Policy
+        </a> and
+        <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">
+          How Google uses data when you use our partners' sites or apps
+        </a>.
+      </span>
+    </div>
+
+    <p>
+      You can opt out of personalised advertising at the device level by going to
+      <strong>Settings → Google → Ads → Opt out of Ads Personalisation</strong>
+      on your Android device. TrackSub respects the advertising preferences set
+      on your device.
+    </p>
+  </section>
+
+  <!-- 6. Analytics & Crash Reporting ───────────────────────── -->
+  <section id="analytics-crash">
+    <h2><span class="icon">📈</span> Analytics &amp; Crash Reporting</h2>
+
+    <p>
+      To keep TrackSub reliable and to understand which features are actually
+      useful, we use two focused, privacy-respecting third-party services.
+      Neither ever receives your subscription names, amounts, due dates,
+      notes, or any other financial information you enter in the app — that
+      data always stays on your device, as described in §3.
+    </p>
+
+    <p><strong>Crash reporting — Sentry.</strong> If TrackSub crashes or hits
+      an unexpected error, a report is sent to Sentry, an application
+      monitoring service, so we can fix the problem. A crash report typically
+      includes:</p>
+
+    <ul>
+      <li>The error message and code location that caused the crash</li>
+      <li>Device model, OS version, and app version</li>
+      <li>A short trail of the last few actions taken before the crash (e.g. which screen was open)</li>
+    </ul>
+
+    <p>
+      We do not send your IP address to Sentry, and crash reports never
+      include subscription data, notes, or anything you've typed into a
+      form field.
+    </p>
+
+    <p><strong>Usage analytics — Aptabase.</strong> We use Aptabase, a
+      privacy-first analytics service, to understand broad usage patterns —
+      for example, how many people complete onboarding, add a subscription,
+      use the export feature, or view the Premium upgrade screen. Aptabase:</p>
+
+    <ul>
+      <li>Does not use advertising IDs, device fingerprinting, or cookies</li>
+      <li>Does not assign you a persistent user identifier — sessions cannot be linked across days</li>
+      <li>Only receives anonymous event names (like "bill added" or "export used"), your general OS/app version, and no personal or financial content</li>
+    </ul>
+
+    <div class="callout callout-blue">
+      <span class="callout-icon">🔗</span>
+      <span>
+        For more detail, see
+        <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">Sentry's Privacy Policy</a>
+        and
+        <a href="https://aptabase.com/legal/privacy" target="_blank" rel="noopener">Aptabase's Privacy Policy</a>.
+      </span>
+    </div>
+  </section>
+
+  <!-- 7. Children's Privacy ───────────────────────────────── -->
+  <section id="childrens-privacy">
+    <h2><span class="icon">🧒</span> Children's Privacy</h2>
+
+    <p>
+      TrackSub is not directed at children under the age of 13 and is designed
+      for adult users managing personal or household finances.
+    </p>
+
+    <p>
+      We do not knowingly collect any personal information from children under 13.
+      If you are a parent or guardian and believe your child has provided personal
+      information through the app, please contact us at
+      <a href="mailto:narisystems@gmail.com">narisystems@gmail.com</a>
+      and we will take prompt steps to address it.
+    </p>
+  </section>
+
+  <!-- 8. Your Rights & Choices ────────────────────────────── -->
+  <section id="your-rights">
+    <h2><span class="icon">⚖️</span> Your Rights &amp; Choices</h2>
+
+    <p>Because NaRiSystems does not collect your personal data, most traditional
+       data-subject rights (access, deletion, portability) are automatically
+       satisfied — your data never leaves your device in the first place.
+       Nonetheless, here is what you can do:</p>
+
+    <ul>
+      <li>
+        <strong>Export your data</strong> — use the JSON/CSV export feature in-app
+        at any time, free of charge.
+      </li>
+      <li>
+        <strong>Delete your data</strong> — uninstalling the app or using
+        Android's "Clear Data" option permanently removes all locally stored information.
+      </li>
+      <li>
+        <strong>Delete your Drive backup</strong> — disable the backup feature in
+        Settings or delete the backup folder directly in Google Drive.
+      </li>
+      <li>
+        <strong>Opt out of personalised ads</strong> — use the Android Advertising
+        settings described in §5 above.
+      </li>
+    </ul>
+  </section>
+
+  <!-- 9. Changes to This Policy ───────────────────────────── -->
+  <section id="changes">
+    <h2><span class="icon">🔄</span> Changes to This Policy</h2>
+
+    <p>
+      If we make material changes to this Privacy Policy, we will update the
+      "Last updated" date at the top of this page and post a notice inside the
+      app on the next launch. We encourage you to review this page periodically.
+    </p>
+
+    <p>
+      Continued use of TrackSub after changes are posted constitutes your
+      acceptance of the updated policy. If you disagree with any changes,
+      you can discontinue use of the app at any time.
+    </p>
+
+    <p>
+      The current version of this policy is always available at<br />
+      <a href="https://narisystems.github.io/tracksub/privacy">
+        https://narisystems.github.io/tracksub/privacy
+      </a>
+    </p>
+  </section>
+
+  <!-- 10. Contact Us ───────────────────────────────────────── -->
+  <section id="contact">
+    <h2><span class="icon">✉️</span> Contact Us</h2>
+
+    <p>
+      Have a question about this policy or how TrackSub handles your data?
+      We'd love to hear from you.
+    </p>
+
+    <div class="contact-card">
+      <span class="contact-icon">📬</span>
+      <p>
+        <strong>NaRiSystems — Privacy Enquiries</strong>
+        <a href="mailto:narisystems@gmail.com">narisystems@gmail.com</a>
+      </p>
+    </div>
+
+    <p style="margin-top:16px;">
+      You can also learn more about the app at
+      <a href="https://narisystems.github.io/tracksub" target="_blank" rel="noopener">
+        narisystems.github.io/tracksub
+      </a>
+      or view the app on the
+      <a href="https://play.google.com/store/apps/details?id=com.tracksub.app"
+         target="_blank" rel="noopener">
+        Google Play Store
+      </a>.
+    </p>
+  </section>
+
+</main>
+
+<!-- ══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<footer>
+  <p>
+    © 2026 NaRiSystems. All rights reserved. &nbsp;·&nbsp;
+    <a href="https://narisystems.github.io/tracksub">TrackSub Home</a> &nbsp;·&nbsp;
+    <a href="https://play.google.com/store/apps/details?id=com.tracksub.app">Google Play</a>
+  </p>
+  <p style="margin-top:6px;">
+    TrackSub v1.0.0 &nbsp;·&nbsp; Privacy Policy last updated July 15, 2026
+  </p>
+</footer>
+
+</body>
+</html>
