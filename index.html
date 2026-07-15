@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrackSub — Bill &amp; Subscription Tracker</title>
+  <style>
+    :root {
+      --brand: #5C6BC0;
+      --brand-dark: #3949AB;
+      --text: #212121;
+      --muted: #616161;
+      --bg: #FAFAFA;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+    }
+    main {
+      max-width: 480px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--brand-dark);
+      margin-bottom: 12px;
+    }
+    p.tagline {
+      color: var(--muted);
+      margin-bottom: 32px;
+      font-size: 16px;
+    }
+    .links a {
+      display: inline-block;
+      margin: 0 8px 8px;
+      padding: 10px 20px;
+      background: var(--brand);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    .links a:hover { background: var(--brand-dark); }
+    footer {
+      margin-top: 40px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    footer a { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>TrackSub</h1>
+    <p class="tagline">A private, local-first bill and subscription tracker. No bank link required — your data stays on your device.</p>
+    <div class="links">
+      <a href="https://play.google.com/store/apps/details?id=com.tracksub.app">Get it on Google Play</a>
+      <a href="privacy_policy.html">Privacy Policy</a>
+    </div>
+    <footer>
+      Built by <a href="https://github.com/narisystems">NaRiSystems</a>
+    </footer>
+  </main>
+</body>
+</html>
